@@ -27,9 +27,7 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
 
-//        trans.replace(R.id.nav_host_fragment, BillBoardFragment())
-//        movieViewModel.SetBillboardFragment()
-//        trans.commit()}
+
     }
 
 
