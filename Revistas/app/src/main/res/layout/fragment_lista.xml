@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.revistas.ui.revista.viewmodel.RevistaViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundLayout"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_gap"
+            android:gravity="center"
+            android:text="@string/inventario_title"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_link_new_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="@dimen/extra_gap"
+            android:layout_marginBottom="@dimen/normal_gap"
+            android:contentDescription="add button"
+             />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/revistas_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_gap"
+            android:layout_marginTop="@dimen/extra_gap"
+            android:layout_marginEnd="@dimen/normal_gap"
+
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
