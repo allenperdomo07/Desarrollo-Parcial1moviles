@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.revistas.data.model.RevistaModel
 
 class RevistaViewModel {
     val name = MutableLiveData("")
@@ -28,26 +29,26 @@ class RevistaViewModel {
         screenNumber = 0
     }
 
-    fun getMovies () = repository.getMovies()
+    fun getRevista () = repository.getRevista()
 
-    private fun addMovie (movie: MovieModel) = repository.setMovies(movie)
+    private fun addRevista (movie: RevistaModel) = repository.setRevista(revista)
 
-    fun createMovie(){
+    fun createRevista(){
         if(!validateData()){
             status.value = WRONG_INFORMATION
             return
         }
-        val movie = MovieModel(
+        val revista = RevistaModel(
             name.value!!,
             category.value!!,
             description.value!!,
             qualification.value!!,
 
             )
-        addMovie(movie)
+        addRevista(revista)
         clearData()
 
-        status.value = MOVIE_CREATED
+        status.value = REVISTA_CREATED
     }
 
     private fun validateData(): Boolean{
@@ -70,23 +71,5 @@ class RevistaViewModel {
         status.value = INACTIVE
     }
 
-    fun setSelectedMovie(movie: MovieModel){
-        name.value = movie.name
-        category.value = movie.category
-        description.value = movie.description
-        qualification.value = movie.qualification
-    }
-    companion object{
-        val Factory = viewModelFactory {
-            initializer {
-                val movieRepositoryApp = (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as MovieReviewerApplication).movieRepository
 
-                MovieViewModel(movieRepositoryApp)
-            }
-        }
-        const val MOVIE_CREATED = "Movie created"
-        const val  WRONG_INFORMATION = "Wrong information"
-        const val INACTIVE = ""
-
-    }
 }
