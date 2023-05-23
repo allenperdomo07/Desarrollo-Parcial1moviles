@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Revistas</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="inventario_title">Billboard</string>
+    <string name="new_revista_title">New Movie</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_category">Category</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_calification">Calification</string>
+    <string name="btn_submit">Submit</string>
+    <string name="vanity_fair_title">Vanity Fair</string>
+    <string name="vanity_fair_calification">9.0</string>
+    <string name="mens_health_title">Mens Health</string>
+    <string name="mens_health_calification">7.5</string>
+    <string name="vanityfair_description">Buena revista de moda</string>
+    <string name="revista_description_image">revista image</string>
+</resources>
